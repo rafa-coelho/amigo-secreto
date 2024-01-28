@@ -13,23 +13,18 @@ type Selected = {
 const inter = Inter({ subsets: ["latin"] });
 
 const View = () => {
-
-
     const [secretSanta, set_secretSanta] = useState<Selected>();
-
-    const getSecretSanta = () => {
-        console.log(router.query)
-        const hash = router.query.id!.toString();
-        const [name1, name2] = decryptNamePair(hash)!;
-
-        set_secretSanta({ name1, name2 });
-    };
     const router = useRouter();
 
     useEffect(() => {
-        if (router.isReady)
-            getSecretSanta();
-    }, [router.isReady]);
+        if (router.isReady) {
+            const hash = router.query.hash!.toString();
+            const [name1, name2] = decryptNamePair(hash)!;
+
+            set_secretSanta({ name1, name2 });
+        }
+
+    }, [router.isReady, router.query]);
 
     if (!secretSanta)
         return "Loading..."

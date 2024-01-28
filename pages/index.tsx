@@ -231,7 +231,7 @@ export default function Home () {
                         {pair.name}
                         <ShareButton
                           title={"Enviar link"}
-                          text={`Você foi adicionado ao Amigo Secreto: "${selectedSecretSanta.title}"!\nE aqui está o seu link:\n${hostLisk}/${pair.hash}`}
+                          text={`Você foi adicionado ao Amigo Secreto: "${selectedSecretSanta.title}"!\nE aqui está o seu link:\n${hostLisk}resultado?hash=${pair.hash}`}
                           className={`${styles.button} ${styles.addButton}`}
                         />
                       </li>
