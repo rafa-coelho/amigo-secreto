@@ -1,39 +1,41 @@
-<h1 align="center">Secret Santa</h1>
+<h1 align="center">Amigo Secreto</h1>
 
 <center>
 
-[Leia em Portguês](./LEIAME.md)
+[Read in English](./README.md)
 
 </center>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/rafa-coelho/amigo-secreto?color=56BEB8">
+
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/rafa-coelho/amigo-secreto?color=56BEB8">
+
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rafa-coelho/amigo-secreto?color=56BEB8">
+
 </p>
 
+#### :sparkles: Sobre o projeto
+É um criador de "Amigo Secreto"s feito para funcionar sem um banco de dados em servidor.
 
-#### :sparkles: About the project
-It's a "Secret Santa" creator designed to work without a server database.
+Ele utiliza o **IndexedDB** do navegador para armazenar as informações localmente para o criador do sorteio.
 
-It uses the IndexedDB of the browser to store information locally for the creator of the draw.
+Ao gerar informar os nomes e criar o Amigo Secreeto, a aplicação sorteia o nome e gera um link para cada participante.
 
-When generating, inform the names and create the Secret Santa, the application draws a name and generates a link for each participant.
+O Link contém um HASH baseado no nome do participante o de seu amigo sorteado. 
+Assim, sem a necessidade de salvar a informação, os participantes podem ver quem eles tiraram.
 
-The link contains a HASH based on the name of the participant and their randomly selected friend.
-Thus, without the need to save the information, participants can see who they drew.
-
-#### :rocket: Used Technologies
+#### :rocket: Tecnologias usadas
 
 - [NodeJS](https://nodejs.org/en)
 - [NextJS](https://nextjs.org/)
 - [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 
+#### Como executar
 
 
-#### How to Run
 
-To install:
+Para instalar:
 
 ```bash
 npm install
@@ -41,15 +43,15 @@ npm install
 yarn
 ```
 
-To run:
+Para excutar
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-#### Where's the Demo?
-It's here: [Secret Santa](https://amigo-secreto.racoelho.dev/)
+#### Cadê o demo? 
+Tá aqui: [Amigo Secreto](https://amigo-secreto.racoelho.dev/)
 
 <hr />
 
@@ -60,16 +62,16 @@ It's here: [Secret Santa](https://amigo-secreto.racoelho.dev/)
 ![Home Page Empty](./assets/screenshots/home-page-empty.png)
 ![Home Page Filled](./assets/screenshots/home-page-filled.png)
 
-##### Creating Draw: 
+##### Criando Sorteio: 
 ![Creating](./assets/screenshots/create-page.png)
 ![Creating Filled](./assets/screenshots/create-page-filled.png)
 
-##### View:
+##### Visualizar:
 ![View Secret Santa](./assets/screenshots/view-secret-santa-page.png)
 
-##### Generated Link:
+##### Link gerado:
 Ao enviar o link, a mensagem ficará assim:
 ![Match Result](./assets/screenshots/received-message.png)
 
-##### Result
+##### Resultado
 ![Result](./assets/screenshots/view-result-page.png)
