@@ -3,9 +3,10 @@ import React from 'react';
 interface IShareButtonProps {
     title: string;
     text: string;
+    className?: string;
 }
 
-const ShareButton = ({title, text} : IShareButtonProps) => {
+const ShareButton = ({title, text, className} : IShareButtonProps) => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
@@ -20,7 +21,7 @@ const ShareButton = ({title, text} : IShareButtonProps) => {
   };
 
   return (
-    <button onClick={handleShare}>{title}</button>
+    <button className={className} onClick={handleShare}>{title}</button>
   );
 };
 

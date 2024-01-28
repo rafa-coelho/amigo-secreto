@@ -7,6 +7,8 @@ import { decryptNamePair, encryptNamePair } from "@/util/Crypt";
 import { IndexedDBManager } from "@/util/IndexedDB";
 import { v4 as uuidv4 } from "uuid";
 import ShareButton from "@/components/ShareButton";
+import { useRouter } from "next/router";
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,6 +36,7 @@ export default function Home () {
   const [secretSantaList, set_secretSantaList] = useState<SecretSanta[]>([]);
   const [selectedSecretSanta, set_selectedSecretSanta] = useState<SecretSanta>();
   const [content, set_content] = useState(PageContent.Home);
+  const [hostLisk, setHostLisk] = useState('');
 
   const pairs = (names: string[]): Pair[] => {
     const _pairs: Pair[] = [];
@@ -84,11 +87,11 @@ export default function Home () {
       set_title("");
       set_names([]);
     }
-
-    if (content == PageContent.Form) {
-
-    }
   }, [content]);
+
+  useEffect(() => {
+    setHostLisk(window.location.host);
+  }, []);
 
   const handlekeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
     if (event.key === "Escape") {
@@ -228,9 +231,8 @@ export default function Home () {
                         {pair.name}
                         <ShareButton
                           title={"Enviar link"}
-                          text={
-                            `Você foi adicionado ao Amigo Secreto: "${selectedSecretSanta.title}"!\nE aqui está o seu link:\nhttp://racoelho.com.br/${pair.hash}
-                          `}
+                          text={`Você foi adicionado ao Amigo Secreto: "${selectedSecretSanta.title}"!\nE aqui está o seu link:\n${hostLisk}/${pair.hash}`}
+                          className={`${styles.button} ${styles.addButton}`}
                         />
                       </li>
                     ))
