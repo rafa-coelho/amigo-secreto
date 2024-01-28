@@ -68,7 +68,7 @@ It's here: [Secret Santa](https://amigo-secreto.racoelho.dev/)
 ![View Secret Santa](./assets/screenshots/view-secret-santa-page.png)
 
 ##### Generated Link:
-Ao enviar o link, a mensagem ficará assim:
+After send the link, thee message will be like this:
 ![Match Result](./assets/screenshots/received-message.png)
 
 ##### Result
