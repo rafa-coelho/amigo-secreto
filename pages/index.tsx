@@ -90,7 +90,7 @@ export default function Home () {
   }, [content]);
 
   useEffect(() => {
-    setHostLisk(window.location.host);
+    setHostLisk(window.location.href);
   }, []);
 
   const handlekeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
