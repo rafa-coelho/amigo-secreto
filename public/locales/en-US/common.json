@@ -1,0 +1,37 @@
+{
+    "createButton": "Create",
+    "nameLabel": "Name",
+    "loading": "Loading...",
+    "siteName": "Secret Santa",
+    "home": {
+        "pageTitle": "Home",
+        "title": "Secret Santas",
+        "emptyList": "You haven't created any yet...",
+        "createFirst": "Create the first one now",
+        "viewSecretSanta": "View",
+        "deleteSecretSanta": "Delete",
+        "deleteSecretSantaConfirmation": "Are you sure you want to delete?"
+    },
+    "create": {
+        "pageTitle": "Create new",
+        "title": "Create New Secret Santa",
+        "titleLabel": "Title",
+        "titlePlaceholder": "Secret Santa title",
+        "addMore": "Add another",
+        "submitButton": "Create Secret Santa",
+        "submitSuccess": "Successfully created!",
+        "minimumOfThree": "You need to provide at least three names!"
+    },
+    "view": {
+        "pageTitle": "{{title}}",
+        "title": "Secret Santa Participants",
+        "instruction": "Click 'Send Link' next to each name so participants can find out who they drew. Each link is unique and directs to a page where the participant can see their Secret Santa pair.",
+        "sendLink": "Send Link",
+        "youWereAdded": "You were added to the Secret Santa: \"{{title}}\"!\nAnd here is your link:\n{{hostLink}}/{{hash}}"
+    },
+    "viewMyPair": {
+        "pageTitle": "Who did you draw?",
+        "title": "Your Secret Santa Pair",
+        "youDrawed": "{{name}}, you drew:"
+    }
+}

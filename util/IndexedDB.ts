@@ -79,7 +79,7 @@ export class IndexedDBManager {
         });
     }
 
-    public async getItemById (id: string): Promise<any | null> {
+    public async getItemById <T>(id: string): Promise<T | null> {
         return new Promise((resolve, reject) => {
             this.connect().then(() => {
                 if (!this.db) {

@@ -1,0 +1,38 @@
+{
+  "createButton": "Criar",
+  "nameLabel": "Nome",
+  "loading": "Carregando...",
+  "siteName": "Amigo Secreto",
+  "home": {
+      "pageTitle": "Home",
+      "title": "Amigos Secretos",
+      "emptyList": "Você não criou nenhum ainda...",
+      "createFirst": "Crie o primeiro agora",
+      "viewSecretSanta": "Visualizar",
+      "deleteSecretSanta": "Excluir",
+      "deleteSecretSantaConfirmation": "Deseja mesmo excluir?"
+  },
+  "create": {
+      "pageTitle": "Criar novo",
+      "title": "Criar Novo Amigo Secreto",
+      "titleLabel": "Título",
+      "titlePlaceholder": "Titulo do amigo secreto",
+      "addMore": "Adicionar outro",
+      "submitButton": "Criar Amigo Secreto",
+      "submitSuccess": "Criado com sucesso!",
+      "minimumOfThree": "Você precisa fornecer ao menos três nomes!"
+  },
+  "view": {
+      "pageTitle": "{{title}}",
+      "title": "Participantes do Amigo Secreto",
+      "instruction": "Clique em 'Enviar Link' ao lado de cada nome para que os participantes possam descobrir quem eles tiraram. Cada link é único e direciona para uma página onde o participante pode ver seu par no Amigo Secreto.",
+      "sendLink": "Enviar Link",
+      "youWereAdded": "Você foi adicionado ao Amigo Secreto: \"{{title}}\"!\nE aqui está o seu link:\n{{hostLink}}/{{hash}}"
+  },
+  "viewMyPair": {
+      "pageTitle": "Quem você tirou?",
+      "title": "Seu par no Amigo Secreto",
+      "youDrawed": "{{name}}, você tirou:"
+
+  }
+}
