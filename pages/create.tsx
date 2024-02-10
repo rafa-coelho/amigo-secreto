@@ -11,6 +11,7 @@ import { encryptNamePair } from '@/util/Crypt';
 import Toast, { NotificationType, ToastProps } from '@/components/Toast';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import * as gtag from "@/data/gtag";
 
 interface NameInputData {
     id: number;
@@ -85,6 +86,13 @@ const CreatePage = () => {
     const notify = (msg: string, type: NotificationType = "success", callback?: () => void) => {
         setNotificationMessage({ msg, type });
         setShowNotification(true);
+        
+        gtag.event({
+            action: gtag.GAEvents.CreateSecretSanta,
+            category: '',
+            label: 'Secret Santa Created',
+            value: ''
+        });
 
         setTimeout(() => {
             setShowNotification(false);

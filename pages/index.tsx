@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import * as gtag from "@/data/gtag";
 
 export default function Home () {
   const { t } = useTranslation();
@@ -20,11 +21,19 @@ export default function Home () {
     if (confirm(t("home.deleteSecretSantaConfirmation"))) {
       const dbManager = new IndexedDBManager();
       await dbManager.deleteItem(id);
+
+      gtag.event({
+        action: gtag.GAEvents.DeleteSecretSanta,
+        label: 'Secret Santa Deleted',
+        category: '',
+        value: ''
+      });
+
       getItems();
     }
 
   };
-  
+
   const title = `${t("home.pageTitle")} | ${t("siteName")}`;
 
   useEffect(() => {
