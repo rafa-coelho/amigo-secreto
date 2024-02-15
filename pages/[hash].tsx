@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { decryptNamePair } from '@/util/Crypt';
+import { decodeNamePair } from '@/util/Crypt';
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -21,7 +21,7 @@ const ViewPair = () => {
     useEffect(() => {
         if (router.isReady) {
             const hash = router.query.hash!.toString();
-            const [name1, name2] = decryptNamePair(hash)!;
+            const [name1, name2] = decodeNamePair(hash)!;
 
             setPair({ name1, name2 });
         }

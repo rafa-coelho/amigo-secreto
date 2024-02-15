@@ -7,7 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import { v4 as uuidv4 } from "uuid";
-import { encryptNamePair } from '@/util/Crypt';
+import { encodeNamePair } from '@/util/Crypt';
 import Toast, { NotificationType, ToastProps } from '@/components/Toast';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -42,7 +42,8 @@ const CreatePage = () => {
     };
 
     const updateNameInput = (id: number, value: string) => {
-        setNames(names.map(name => name.id === id ? { ...name, value } : name));
+        const _value = value.replace(/[^A-Za-z0-9 \u00C0-\u00FF]/g, '');
+        setNames(names.map(name => name.id === id ? { ...name, value: _value } : name));
     };
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -64,7 +65,7 @@ const CreatePage = () => {
         for (let i = 0; i < _names.length; i++) {
             const name = _names[i].trim();
             const pair = _names[(i != _names.length - 1) ? i + 1 : 0].trim();
-            const hash = encryptNamePair(name, pair);
+            const hash = encodeNamePair(name, pair);
 
             _pairs.push({
                 name,
