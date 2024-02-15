@@ -26,8 +26,9 @@
         "pageTitle": "{{title}}",
         "title": "Secret Santa Participants",
         "instruction": "Click 'Send Link' next to each name so participants can find out who they drew. Each link is unique and directs to a page where the participant can see their Secret Santa pair.",
-        "sendLink": "Send Link",
-        "youWereAdded": "You were added to the Secret Santa: \"{{title}}\"!\nAnd here is your link:\n{{hostLink}}/{{hash}}"
+        "sendLink": "Copy Link",
+        "youWereAdded": "You were added to the Secret Santa: \"{{title}}\"!\nAnd here is your link:\n{{hostLink}}/{{hash}}",
+        "copySuccess": "Link copied to clipboard"
     },
     "viewMyPair": {
         "pageTitle": "Who did you draw?",

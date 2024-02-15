@@ -9,8 +9,9 @@ import { useTranslation } from 'next-i18next';
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import { PageProps } from '../_app';
 
-const ViewSecretSantaPage = () => {
+const ViewSecretSantaPage = (props: PageProps) => {
     const router = useRouter();
     const { t } = useTranslation();
     const { id } = router.query;
@@ -67,6 +68,9 @@ const ViewSecretSantaPage = () => {
                                             title={t('view.sendLink')}
                                             text={t('view.youWereAdded', { title: data.title, hostLink: hostLisk!, hash: pair.hash })}
                                             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                            onCopy={() => {
+                                                props.notify(t('view.copySuccess'));
+                                            }}
                                         />
                                     </div>
                                 ))

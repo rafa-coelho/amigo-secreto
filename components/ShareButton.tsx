@@ -5,27 +5,26 @@ interface IShareButtonProps {
   title: string;
   text: string;
   className?: string;
+  onCopy?: () => void;
 }
 
-const ShareButton = ({ title, text, className }: IShareButtonProps) => {
+const ShareButton = ({ title, text, className, onCopy }: IShareButtonProps) => {
   const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title,
-        text
+
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        gtag.event({
+          action: gtag.GAEvents.ShareLink,
+          label: 'Link Shared',
+          category: '',
+          value: ''
+        });
+
+        if(onCopy){
+          onCopy();
+        }
       })
-        .then(() => {
-          gtag.event({
-            action: gtag.GAEvents.ShareLink,
-            label: 'Link Shared',
-            category: '',
-            value: ''
-          });
-        })
-        .catch(error => console.error('Erro ao compartilhar:', error));
-    } else {
-      console.error('Web Share API não é suportada neste navegador.');
-    }
+      .catch(error => console.error('Erro ao copiar:', error));
   };
 
   return (

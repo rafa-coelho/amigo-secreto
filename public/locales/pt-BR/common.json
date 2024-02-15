@@ -26,8 +26,9 @@
       "pageTitle": "{{title}}",
       "title": "Participantes do Amigo Secreto",
       "instruction": "Clique em 'Enviar Link' ao lado de cada nome para que os participantes possam descobrir quem eles tiraram. Cada link é único e direciona para uma página onde o participante pode ver seu par no Amigo Secreto.",
-      "sendLink": "Enviar Link",
-      "youWereAdded": "Você foi adicionado ao Amigo Secreto: \"{{title}}\"!\nE aqui está o seu link:\n{{hostLink}}/{{hash}}"
+      "sendLink": "Copiar Link",
+      "youWereAdded": "Você foi adicionado ao Amigo Secreto: \"{{title}}\"!\nE aqui está o seu link:\n{{hostLink}}/{{hash}}",
+      "copySuccess": "Link copiado para a área de transferência"
   },
   "viewMyPair": {
       "pageTitle": "Quem você tirou?",

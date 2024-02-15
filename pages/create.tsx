@@ -12,13 +12,14 @@ import Toast, { NotificationType, ToastProps } from '@/components/Toast';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import * as gtag from "@/data/gtag";
+import { PageProps } from './_app';
 
 interface NameInputData {
     id: number;
     value: string;
 }
 
-const CreatePage = () => {
+const CreatePage = (props: PageProps) => {
     const router = useRouter();
     const { t } = useTranslation();
     const [title, setTitle] = useState<string>('');
@@ -50,7 +51,7 @@ const CreatePage = () => {
         e.preventDefault();
 
         if (names.length <= 2) {
-            return notify(t("create.minimumOfThree"), "danger");
+            return props.notify(t("create.minimumOfThree"), "danger");
         }
 
         save(title, sortPairs(names.map(x => x.value)));
@@ -79,30 +80,16 @@ const CreatePage = () => {
     const save = async (title: string, pairs: Pair[] = []) => {
         const dbManager = new IndexedDBManager();
         await dbManager.addEditItem({ id: uuidv4(), title, pairs });
-        notify(t("create.submitSuccess"), "success", () => {
+        props.notify(t("create.submitSuccess"), "success", () => {
+            gtag.event({
+                action: gtag.GAEvents.CreateSecretSanta,
+                category: '',
+                label: 'Secret Santa Created',
+                value: ''
+            });
             router.push("/");
-        });
+        })
     };
-
-    const notify = (msg: string, type: NotificationType = "success", callback?: () => void) => {
-        setNotificationMessage({ msg, type });
-        setShowNotification(true);
-        
-        gtag.event({
-            action: gtag.GAEvents.CreateSecretSanta,
-            category: '',
-            label: 'Secret Santa Created',
-            value: ''
-        });
-
-        setTimeout(() => {
-            setShowNotification(false);
-
-            if (callback)
-                callback();
-
-        }, 3000);
-    }
 
     const pageTitle = `${t("create.pageTitle")} | ${t("siteName")}`;
 
