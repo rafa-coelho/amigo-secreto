@@ -58,10 +58,12 @@ It's here: [Secret Santa](https://amigo-secreto.racoelho.dev/)
 
 ##### Home
 ![Home Page Empty](./assets/screenshots/home-page-empty.png)
+
 ![Home Page Filled](./assets/screenshots/home-page-filled.png)
 
 ##### Creating Draw: 
 ![Creating](./assets/screenshots/create-page.png)
+
 ![Creating Filled](./assets/screenshots/create-page-filled.png)
 
 ##### View:
@@ -69,7 +71,7 @@ It's here: [Secret Santa](https://amigo-secreto.racoelho.dev/)
 
 ##### Generated Link:
 After send the link, thee message will be like this:
-![Match Result](./assets/screenshots/received-message.png)
+![Received Message](./assets/screenshots/received-message.png)
 
-##### Result
-![Result](./assets/screenshots/view-result-page.png)
+##### View Pair
+![View Pair](./assets/screenshots/view-result-page.png)

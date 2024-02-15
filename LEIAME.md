@@ -59,19 +59,19 @@ Tá aqui: [Amigo Secreto](https://amigo-secreto.racoelho.dev/)
 #### :tv: Screenshots
 
 ##### Home
-![Home Page Empty](./assets/screenshots/home-page-empty.png)
-![Home Page Filled](./assets/screenshots/home-page-filled.png)
+![Pagina Inicial Vazia](./assets/screenshots/home-vazia.png)
+![Pagina Inicial Preenchida](./assets/screenshots/home-preenchida.png)
 
 ##### Criando Sorteio: 
-![Creating](./assets/screenshots/create-page.png)
-![Creating Filled](./assets/screenshots/create-page-filled.png)
+![Tela de Criação](./assets/screenshots/tela-criar-vazia.png)
+![Tela de Criação Preenchida](./assets/screenshots/tela-criar-preenchida.png)
 
 ##### Visualizar:
-![View Secret Santa](./assets/screenshots/view-secret-santa-page.png)
+![Visualizar Amigo Secreto](./assets/screenshots/visualizar-amigo-secreto.png)
 
 ##### Link gerado:
 Ao enviar o link, a mensagem ficará assim:
-![Match Result](./assets/screenshots/received-message.png)
+![Mensagem Recebida](./assets/screenshots/mensagem-recebida.png)
 
-##### Resultado
-![Result](./assets/screenshots/view-result-page.png)
+##### Ver quem tirou
+![Ver quem tirou](./assets/screenshots/ver-amigo-secreto.png)
