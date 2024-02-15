@@ -1,5 +1,11 @@
 {
   "name": "amigo-secreto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafa-coelho/amigo-secreto"
+  },
+
+  "homepage": "https://secret-santa.racoelho.com.br",
   "version": "0.1.0",
   "private": true,
   "scripts": {
