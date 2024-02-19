@@ -66,7 +66,7 @@ const ViewSecretSantaPage = (props: PageProps) => {
                                         <span className="text-white">{pair.name}</span>
                                         <ShareButton
                                             title={t('view.sendLink')}
-                                            text={t('view.youWereAdded', { title: data.title, hostLink: hostLisk!, hash: pair.hash })}
+                                            text={`${hostLisk}/${pair.hash}`}
                                             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
                                             onCopy={() => {
                                                 props.notify(t('view.copySuccess'));
